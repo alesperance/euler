@@ -3,6 +3,8 @@
  * 
  * What is the value of the first triangle number to have over
  * five hundred divisors?
+ * 
+ * Running Time: 811086ms (way to slow, will improve in the future)
  */
 public class HighlyDivisibleTriangularNumber 
 {
@@ -37,16 +39,7 @@ public class HighlyDivisibleTriangularNumber
 	 */
 	static int GetTriangleNumber(int num)
 	{
-		int triangleNumber = 0;
-		
-		//While the number we passed in isn't 0, we'll
-		//add the value to the triangle number and decrement
-		//the value of num by 1.
-		while(num != 0)
-		{
-			triangleNumber += num--;
-		}
-		return triangleNumber;
+		return num * (num + 1) / 2;
 	}
 	
 	
